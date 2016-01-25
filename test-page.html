@@ -1,0 +1,57 @@
+<html>
+<style>
+
+.overlay {
+	height: 730px; /* image height */
+	flex: 1 1 0; /* width/# of images */
+	display: flex;
+	flex-direction: row;
+	border: 1px solid blue;
+}
+
+#image-container {
+	background-image: url('front.jpg');
+	background-size: 100%;
+	height: 730px;
+	width: 500px;
+	z-index: -1;
+	left: 8px;
+	position: absolute;
+}
+
+#overlay-one:hover ~ #image-container {
+	background-image: url('back.jpg');
+}
+#overlay-two:hover ~ #image-container {
+	background-image: url('left-back.jpg');
+}
+#overlay-three:hover ~ #image-container {
+	background-image: url('left.jpg');
+}
+#overlay-four:hover ~ #image-container {
+	background-image: url('left-front.jpg');
+}
+#overlay-five:hover ~ #image-container {
+	background-image: url('front.jpg');
+}
+
+.flex-wrapper {
+	width: 500px;
+	display: flex;
+}
+
+</style>
+<body>
+<!-- for as many images as there are -->
+
+<div class="flex-wrapper">
+	<div id="overlay-one" class="overlay"></div>
+	<div id="overlay-two" class="overlay"></div>
+	<div id="overlay-three" class="overlay"></div>
+	<div id="overlay-four" class="overlay"></div>
+	<div id="overlay-five" class="overlay"></div>
+	<div id="image-container"></div>
+</div>
+
+</body>
+</html>
