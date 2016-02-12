@@ -3,9 +3,10 @@
 
 .overlay {
 	height: 730px; /* image height */
+	-webkit-flex: 1 1 auto;
 	flex: 1 1 0; /* width/# of images */
+	display: -webkit-flex;
 	display: flex;
-	flex-direction: row;
 	border: 1px solid blue;
 }
 
@@ -38,6 +39,9 @@
 .flex-wrapper {
 	width: 500px;
 	display: flex;
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
 }
 
 </style>
